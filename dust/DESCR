@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+
+[![Build Status](https://travis-ci.org/bootandy/dust.svg?branch=master)](https://travis-ci.org/bootandy/dust)
+
+# Dust
+
+du + rust = dust. Like du but more intuitive.
+
+# Why
+
+Because I want an easy way to see where my disk is being used.
+
+# Demo
+![Example](media/snap.png)
+
+## Install
+
+#### Cargo <a href="https://repology.org/project/du-dust/versions"><img src="https://repology.org/badge/vertical-allrepos/du-dust.svg" alt="Packaging status" align="right"></a>
+
+* `cargo install du-dust`
+
+...

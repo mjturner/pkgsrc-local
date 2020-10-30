@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+xsv is a command line program for indexing, slicing, analyzing, splitting
+and joining CSV files. Commands should be simple, fast and composable:
+
+1. Simple tasks should be easy.
+2. Performance trade offs should be exposed in the CLI interface.
+3. Composition should not come at the expense of performance.
+
+This README contains information on how to
+[install `xsv`](https://github.com/BurntSushi/xsv#installation), in addition to
+a quick tour of several commands.
+
+[![Linux build status](https://api.travis-ci.org/BurntSushi/xsv.svg)](https://travis-ci.org/BurntSushi/xsv)
+[![Windows build status](https://ci.appveyor.com/api/projects/status/github/BurntSushi/xsv?svg=true)](https://ci.appveyor.com/project/BurntSushi/xsv)
+[![](http://meritbadge.herokuapp.com/xsv)](https://crates.io/crates/xsv)
+
+Dual-licensed under MIT or the [UNLICENSE](http://unlicense.org).
+
+
+### Available commands
+
+...
