@@ -1,7 +1,6 @@
 # $NetBSD$
 
 DISTNAME=	starship-0.55.0
-PKGREVISION=	1
 CATEGORIES=	shells
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=starship/}
@@ -14,14 +13,15 @@ LICENSE=	isc
 # The libc and rust-battery crates currently have limited platform support
 ONLY_FOR_PLATFORM=	Darwin-*-* DragonFly-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
 
-LIBC_REV=	4fcfa55fbbd40e8471865203fcdb52cfac1ec2a7
-DISTFILES=	${DEFAULT_DISTFILES}
-DISTFILES+=	libc-${LIBC_REV}.tar.gz
-SITES.libc-${LIBC_REV}.tar.gz+=	-${MASTER_SITE_GITHUB:=rust-lang/}libc/archive/${LIBC_REV}.tar.gz
-
 USE_LANGUAGES=			c
-RUST_REQ?=			1.51.0
+USE_TOOLS+=			pkg-config
 
+MAKE_ENV+=	OPENSSL_DIR=${BUILDLINK_PREFIX.openssl:Q}
+RUSTFLAGS+=	-C link-arg=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+MAKE_ENV+=	RUSTFLAGS=${RUSTFLAGS:Q}
+
+# Disable rust-battery crate on NetBSD
+# See https://github.com/svartalf/rust-battery/issues/20
 CARGO_NO_DEFAULT_FEATURES=	YES
 CARGO_FEATURES+=		http
 .include "../../mk/bsd.prefs.mk"
@@ -33,11 +33,11 @@ CARGO_FEATURES+=	battery
 
 INSTALLATION_DIRS=	bin
 
-post-extract:
-	mv ${WRKDIR}/libc-* ${WRKSRC}
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/starship ${DESTDIR}${PREFIX}/bin
 
+DEPENDS+=		git-base-[0-9]*:../../devel/git-base
+
 .include "../../lang/rust/cargo.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
