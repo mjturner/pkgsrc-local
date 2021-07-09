@@ -14,6 +14,7 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 GO_VERSION_DEFAULT=	115
 
 INSTALLATION_DIRS=	bin
+PKG_SHELL=		bin/elvish
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/elvish ${DESTDIR}${PREFIX}/bin
