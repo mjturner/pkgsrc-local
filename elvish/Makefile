@@ -1,12 +1,11 @@
 # $NetBSD$
 
 DISTNAME=	elvish-0.15.0
-PKGNAME=	go-${DISTNAME}
 MASTER_SITES=	${MASTER_SITE_GITHUB:=elves/}
 CATEGORIES=	shells
 
 MAINTAINER=	mj@mjturner.net
-HOMEPAGE=	https://github.com/elves/elvish/
+HOMEPAGE=	https://elv.sh/
 COMMENT=	Expressive programming language and a versatile interactive shell
 LICENSE=	2-clause-bsd
 
