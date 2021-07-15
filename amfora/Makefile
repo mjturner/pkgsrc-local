@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-#.include "../../mk/bsd.prefs.mk"
-
 INSTALLATION_DIRS=	bin share/applications
 
 .include "go-modules.mk"
