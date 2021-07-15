@@ -30,3 +30,4 @@ do-install:
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
