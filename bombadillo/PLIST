@@ -1,0 +1,4 @@
+@comment $NetBSD$
+bin/bombadillo
+man/man1/bombadillo.1
+share/applications/bombadillo.desktop
