@@ -11,12 +11,13 @@ LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-${PKGVERSION_NOREV}//}
 
-INSTALLATION_DIRS=	bin share/applications ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin share/applications share/icons/hicolor/100x100/apps ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/.gopath/bin/bombadillo ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/bombadillo.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/bombadillo.desktop ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/bombadillo-icon.png ${DESTDIR}${PREFIX}/share/icons/hicolor/100x100/apps
 
 .include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
