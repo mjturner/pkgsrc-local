@@ -1,0 +1,10 @@
+Gitea is a self-hosted Git service. It is similar to GitHub, Bitbucket, and
+GitLab.
+
+Some features:
+o User Dashboard
+o Issues dashboard
+o Pull request dashboard
+o Multiple repository types
+o Notifications (email and web)
+o Multi-language support

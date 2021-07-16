@@ -1,0 +1,7 @@
+$NetBSD$
+
+SHA1 (gitea-src-1.14.5.tar.gz) = 8aec4c7b3ac74217c0017ccbeee06c162d3f63f3
+RMD160 (gitea-src-1.14.5.tar.gz) = b523dc7a6dbbfc627342cac5e0f9d1f087a5f68b
+SHA512 (gitea-src-1.14.5.tar.gz) = cb6671c4da6979a626e70b993cce65253173db9f999af8c25c0319e7a8a69cb242e5cd6d22e429d70f23e0db8a5a3d8ab7ed8c0c9042f20aca2d6c468bcaed1b
+Size (gitea-src-1.14.5.tar.gz) = 117880790 bytes
+SHA1 (patch-Makefile) = b508db14bf1cf4389c3850917df765e46d9a0e72
