@@ -1,2 +1,2 @@
 @comment $NetBSD$
-bin/gitea
+sbin/gitea

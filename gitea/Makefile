@@ -16,14 +16,15 @@ USE_TOOLS+=		gmake
 MAKE_ENV+=		TAGS=bindata
 # sqlite sqlite_unlock_notify"
 BUILD_TARGET=		build
-INSTALLATION_DIRS=	bin
+
+INSTALLATION_DIRS=	sbin
 
 do-extract:
 	${MKDIR} ${WRKSRC}
 	${RUN} cd ${WRKSRC} && ${TAR} xf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gitea ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/gitea ${DESTDIR}${PREFIX}/sbin
 
 #.include "../../lang/go/go-module.mk"
 .include "../../mk/bsd.pkg.mk"
