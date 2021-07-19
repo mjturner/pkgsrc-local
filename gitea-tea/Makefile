@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	gitea-tea-0.7.0
-CATEGORIES=	devel
+CATEGORIES=	net
 MASTER_SITES=	-https://gitea.com/gitea/tea/archive/v${PKGVERSION_NOREV}.tar.gz
 
 MAINTAINER=	mj@mjturner.net
